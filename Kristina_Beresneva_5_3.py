@@ -35,12 +35,14 @@ def enter_move(board):           #ход игрока
         flag = False
         checklist.remove(move)
         board[(move - 1) // 3][(move - 1) % 3] = userSign
+        display_board(board)
 enter_move(board)
 
 def comp_move(board):           #ход компьютера
     move = checklist[0]
     checklist.remove(move)
     board[(move - 1) // 3][(move - 1) % 3] = compSign
+    display_board(board)
 comp_move(board)
 
 def check_win(board):        #проверка победы
@@ -59,7 +61,7 @@ def check_win(board):        #проверка победы
 check_win(board)
 
 def main(board):             #сама игра
-    counter = 1
+    counter = 0
     win = False
     while not win:
         display_board(board)
@@ -81,4 +83,3 @@ def main(board):             #сама игра
             print("Ничья!")
             break
 main(board)
-
