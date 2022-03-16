@@ -18,18 +18,3 @@ print(factorial(n))    #выводим результат
 
 for n in range(-1, 9):   #для проверки правильности
     print(factorial(n))
-
-  
-   
-        
-        
-    
-    
-        
-
-
-
-
-
-
-
